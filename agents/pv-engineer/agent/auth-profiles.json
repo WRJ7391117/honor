@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "profiles": {
+    "qwen-portal:default": {
+      "type": "oauth",
+      "provider": "qwen-portal",
+      "access": "-ULZqg2B39qiTChkhLBJZ1pUkMvH30UfK6EJ2mHveBYgRE0mCoDcD31I8VGQcVZZWGu76xTSuTGVJqq-8drtIg",
+      "refresh": "l7qFbznLsy0uSYrT2jqbQNGbNfbPFeRQtWTNJThc2a1DC0ev1XdFnARrRIfmSCMI2KCKZNtXhBpi0fSUn6n77Q",
+      "expires": 1773005110006
+    },
+    "minimax-cn:default": {
+      "type": "api_key",
+      "provider": "minimax-cn",
+      "key": "sk-api-KLhLsNvZ-XKQpK9_pWmvWTOHI9OjGrVXab5DIkLuNViI54xDbPIVaoLp6VtS36kYcNVDm-P7ME1xYWgHIARbaD-CWVeqm0dsUsQeJY2oq49VbKNZy3_q-xo"
+    }
+  },
+  "usageStats": {
+    "qwen-portal:default": {
+      "errorCount": 0,
+      "lastUsed": 1773024670801
+    },
+    "minimax-cn:default": {
+      "errorCount": 0,
+      "lastUsed": 1773031140115
+    }
+  }
+}
