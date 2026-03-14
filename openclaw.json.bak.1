@@ -1,12 +1,12 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.7",
-    "lastTouchedAt": "2026-03-09T04:09:20.825Z"
+    "lastTouchedAt": "2026-03-10T10:42:59.326Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-09T04:09:20.776Z",
+    "lastRunAt": "2026-03-09T04:23:50.012Z",
     "lastRunVersion": "2026.3.7",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "auth": {
@@ -116,25 +116,15 @@
       {
         "id": "pv-engineer",
         "name": "光伏系统开发工程师",
-        "workspace": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\pv-engineer"
+        "workspace": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\pv-engineer",
+        "tools": {
+          "profile": "full"
+        }
       }
     ]
   },
   "tools": {
     "profile": "coding"
-  },
-  "channels": {
-    "feishu": {
-      "enabled": true,
-      "dmPolicy": "open",
-      "accounts": {
-        "pv-engineer": {
-          "appId": "cli_a920608cfff8dbb6",
-          "appSecret": "mUMS6FE8xIsudTUAvOk0cc2mHwjKxaLY",
-          "botName": "光伏系统开发工程师"
-        }
-      }
-    }
   },
   "bindings": [
     {
@@ -166,6 +156,25 @@
       }
     }
   },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "accounts": {
+        "pv-engineer": {
+          "appId": "cli_a920608cfff8dbb6",
+          "appSecret": "mUMS6FE8xIsudTUAvOk0cc2mHwjKxaLY",
+          "botName": "光伏系统开发工程师"
+        },
+        "default": {
+          "dmPolicy": "open",
+          "allowFrom": [
+            "*"
+          ]
+        }
+      },
+      "dmPolicy": "pairing"
+    }
+  },
   "gateway": {
     "port": 18789,
     "mode": "local",
@@ -188,6 +197,13 @@
         "reminders.add",
         "sms.send"
       ]
+    }
+  },
+  "skills": {
+    "entries": {
+      "clawhub": {
+        "enabled": true
+      }
     }
   },
   "plugins": {
