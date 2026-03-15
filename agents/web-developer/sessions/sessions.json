@@ -1,0 +1,618 @@
+{
+  "agent:web-developer:feishu:group:oc_e889ee1e558f98e299f7646d81c0152d": {
+    "sessionId": "5fd97079-bea2-492b-a6b5-6c96f5240a70",
+    "updatedAt": 1773583644512,
+    "systemSent": true,
+    "abortedLastRun": false,
+    "displayName": "feishu:g-oc_e889ee1e558f98e299f7646d81c0152d",
+    "chatType": "group",
+    "channel": "feishu",
+    "groupId": "ou_5f42d705b9101e5af7bb00f726287223",
+    "subject": "oc_e889ee1e558f98e299f7646d81c0152d",
+    "deliveryContext": {
+      "channel": "feishu",
+      "to": "chat:oc_e889ee1e558f98e299f7646d81c0152d",
+      "accountId": "web-developer"
+    },
+    "lastChannel": "feishu",
+    "lastTo": "chat:oc_e889ee1e558f98e299f7646d81c0152d",
+    "lastAccountId": "web-developer",
+    "origin": {
+      "label": "oc_e889ee1e558f98e299f7646d81c0152d",
+      "provider": "feishu",
+      "surface": "feishu",
+      "chatType": "group",
+      "from": "feishu:ou_5f42d705b9101e5af7bb00f726287223",
+      "to": "chat:oc_e889ee1e558f98e299f7646d81c0152d",
+      "accountId": "web-developer"
+    },
+    "sessionFile": "C:\\Users\\73911\\.openclaw\\agents\\web-developer\\sessions\\5fd97079-bea2-492b-a6b5-6c96f5240a70.jsonl",
+    "compactionCount": 0,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>feishu-doc</name>\n    <description>Feishu document read/write operations. Activate when user mentions Feishu docs, cloud docs, or docx links.\n</description>\n    <location>~/.openclaw\\extensions\\feishu\\skills\\feishu-doc\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>feishu-drive</name>\n    <description>Feishu cloud storage file management. Activate when user mentions cloud space, folders, drive.\n</description>\n    <location>~/.openclaw\\extensions\\feishu\\skills\\feishu-drive\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>feishu-perm</name>\n    <description>Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.\n</description>\n    <location>~/.openclaw\\extensions\\feishu\\skills\\feishu-perm\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>feishu-wiki</name>\n    <description>Feishu knowledge base navigation. Activate when user mentions knowledge base, wiki, or wiki links.\n</description>\n    <location>~/.openclaw\\extensions\\feishu\\skills\\feishu-wiki\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>coding-agent</name>\n    <description>Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:&quot;acp&quot;), or any work in ~/clawd workspace (never spawn agents here). Claude Code: use --print --permission-mode bypassPermissions (no PTY). Codex/Pi/OpenCode: pty:true required.</description>\n    <location>~/AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\coding-agent\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\healthcheck\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>nano-pdf</name>\n    <description>Edit PDFs with natural-language instructions using the nano-pdf CLI.</description>\n    <location>~/AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\nano-pdf\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\skill-creator\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agent-browser</name>\n    <description>AI Agent浏览器控制技能，支持网页自动化操作、内容提取、UI测试等功能。基于Vercel Labs agent-browser。</description>\n    <location>~/.openclaw\\skills\\agent-browser\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>feishu-bitable</name>\n    <description>飞书多维表格（Bitable）操作技能。当用户需要读取、创建、更新或查询飞书多维表格数据时使用此技能。</description>\n    <location>~/.openclaw\\skills\\feishu-bitable\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>feishu-calendar-operations</name>\n    <description>飞书日历事件完整操作技能。涵盖日历事件的创建、修改、删除、参会人管理、权限排查等全流程操作。\n基于实际部署和问题排查经验，提供完整的飞书日历集成解决方案。\n</description>\n    <location>~/.openclaw\\skills\\feishu-calendar-operations\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github-push-backup</name>\n    <description>自动将OpenClaw配置文件推送到GitHub仓库进行备份。支持SSH密钥认证和自动处理。</description>\n    <location>~/.openclaw\\skills\\github-push-backup\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>image-generate</name>\n    <description>使用内置 image_generate.py 脚本生成图片, 准备清晰具体的 `prompt`。</description>\n    <location>~/.openclaw\\skills\\image-generate\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>multi-agent-feishu-deployment</name>\n    <description>多Agent多飞书应用部署技能。基于行政专员和IT工程师的部署经验，提供完整的多Agent团队管理和多飞书应用集成解决方案。</description>\n    <location>~/.openclaw\\skills\\multi-agent-feishu-deployment\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>multi-agent-feishu-multi-llm-deployment</name>\n    <description>多Agent多飞书应用多LLM部署技能。基于GLM-4-7部署和CEO Agent创建经验，提供完整的多Agent团队管理、多飞书应用集成和多LLM模型部署方案。</description>\n    <location>~/.openclaw\\skills\\multi-agent-feishu-multi-llm-deployment\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>VeADK-Go 技能集合</name>\n    <description>根据用户的功能需求，完成与 VeADK-Go 相关的功能; 包括：直接根据需求生成 Agent；将Enio Agent转换为VeADK-Go Agent。</description>\n    <location>~/.openclaw\\skills\\veadk-go-skills\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>VeADK 技能集合</name>\n    <description>根据用户的功能需求，完成与 VeADK 相关的功能。</description>\n    <location>~/.openclaw\\skills\\veadk-skills\\SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-generate</name>\n    <description>使用 video_generate.py 脚本生成视频，需要提供文件名和 prompt，可选提供首帧图片（URL或本地路径）。</description>\n    <location>~/.openclaw\\skills\\video-generate\\SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "feishu-doc"
+        },
+        {
+          "name": "feishu-drive"
+        },
+        {
+          "name": "feishu-perm"
+        },
+        {
+          "name": "feishu-wiki"
+        },
+        {
+          "name": "coding-agent",
+          "requiredEnv": []
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "nano-pdf",
+          "requiredEnv": []
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "agent-browser"
+        },
+        {
+          "name": "feishu-bitable"
+        },
+        {
+          "name": "feishu-calendar-operations"
+        },
+        {
+          "name": "github-push-backup"
+        },
+        {
+          "name": "image-generate"
+        },
+        {
+          "name": "multi-agent-feishu-deployment"
+        },
+        {
+          "name": "multi-agent-feishu-multi-llm-deployment"
+        },
+        {
+          "name": "VeADK-Go 技能集合"
+        },
+        {
+          "name": "VeADK 技能集合"
+        },
+        {
+          "name": "video-generate"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "feishu-doc",
+          "description": "Feishu document read/write operations. Activate when user mentions Feishu docs, cloud docs, or docx links.\n",
+          "filePath": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-doc\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-doc",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "feishu-drive",
+          "description": "Feishu cloud storage file management. Activate when user mentions cloud space, folders, drive.\n",
+          "filePath": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-drive\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-drive",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "feishu-perm",
+          "description": "Feishu permission management for documents and files. Activate when user mentions sharing, permissions, collaborators.\n",
+          "filePath": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-perm\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-perm",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "feishu-wiki",
+          "description": "Feishu knowledge base navigation. Activate when user mentions knowledge base, wiki, or wiki links.\n",
+          "filePath": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-wiki\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\extensions\\feishu\\skills\\feishu-wiki",
+          "source": "openclaw-extra",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "coding-agent",
+          "description": "Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:\"acp\"), or any work in ~/clawd workspace (never spawn agents here). Claude Code: use --print --permission-mode bypassPermissions (no PTY). Codex/Pi/OpenCode: pty:true required.",
+          "filePath": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\coding-agent\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\coding-agent",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\healthcheck\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "nano-pdf",
+          "description": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+          "filePath": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\nano-pdf\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\nano-pdf",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\skill-creator\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\AppData\\Roaming\\npm\\node_modules\\openclaw\\skills\\skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "agent-browser",
+          "description": "AI Agent浏览器控制技能，支持网页自动化操作、内容提取、UI测试等功能。基于Vercel Labs agent-browser。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\agent-browser\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\agent-browser",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "feishu-bitable",
+          "description": "飞书多维表格（Bitable）操作技能。当用户需要读取、创建、更新或查询飞书多维表格数据时使用此技能。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\feishu-bitable\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\feishu-bitable",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "feishu-calendar-operations",
+          "description": "飞书日历事件完整操作技能。涵盖日历事件的创建、修改、删除、参会人管理、权限排查等全流程操作。\n基于实际部署和问题排查经验，提供完整的飞书日历集成解决方案。\n",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\feishu-calendar-operations\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\feishu-calendar-operations",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "github-push-backup",
+          "description": "自动将OpenClaw配置文件推送到GitHub仓库进行备份。支持SSH密钥认证和自动处理。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\github-push-backup\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\github-push-backup",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "image-generate",
+          "description": "使用内置 image_generate.py 脚本生成图片, 准备清晰具体的 `prompt`。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\image-generate\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\image-generate",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "multi-agent-feishu-deployment",
+          "description": "多Agent多飞书应用部署技能。基于行政专员和IT工程师的部署经验，提供完整的多Agent团队管理和多飞书应用集成解决方案。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\multi-agent-feishu-deployment\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\multi-agent-feishu-deployment",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "multi-agent-feishu-multi-llm-deployment",
+          "description": "多Agent多飞书应用多LLM部署技能。基于GLM-4-7部署和CEO Agent创建经验，提供完整的多Agent团队管理、多飞书应用集成和多LLM模型部署方案。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\multi-agent-feishu-multi-llm-deployment\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\multi-agent-feishu-multi-llm-deployment",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "VeADK-Go 技能集合",
+          "description": "根据用户的功能需求，完成与 VeADK-Go 相关的功能; 包括：直接根据需求生成 Agent；将Enio Agent转换为VeADK-Go Agent。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\veadk-go-skills\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\veadk-go-skills",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "VeADK 技能集合",
+          "description": "根据用户的功能需求，完成与 VeADK 相关的功能。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\veadk-skills\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\veadk-skills",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "video-generate",
+          "description": "使用 video_generate.py 脚本生成视频，需要提供文件名和 prompt，可选提供首帧图片（URL或本地路径）。",
+          "filePath": "C:\\Users\\73911\\.openclaw\\skills\\video-generate\\SKILL.md",
+          "baseDir": "C:\\Users\\73911\\.openclaw\\skills\\video-generate",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "authProfileOverride": "minimax-cn:default",
+    "authProfileOverrideSource": "auto",
+    "authProfileOverrideCompactionCount": 0,
+    "modelProvider": "minimax-cn",
+    "model": "MiniMax-M2.5",
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1773583621396,
+      "sessionId": "5fd97079-bea2-492b-a6b5-6c96f5240a70",
+      "sessionKey": "agent:web-developer:feishu:group:oc_e889ee1e558f98e299f7646d81c0152d",
+      "provider": "minimax-cn",
+      "model": "MiniMax-M2.5",
+      "workspaceDir": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 29244,
+        "projectContextChars": 10336,
+        "nonProjectContextChars": 18908
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\AGENTS.md",
+          "missing": false,
+          "rawChars": 7809,
+          "injectedChars": 7809,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\SOUL.md",
+          "missing": false,
+          "rawChars": 206,
+          "injectedChars": 206,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\IDENTITY.md",
+          "missing": false,
+          "rawChars": 336,
+          "injectedChars": 336,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\USER.md",
+          "missing": false,
+          "rawChars": 161,
+          "injectedChars": 161,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 167,
+          "injectedChars": 167,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "C:\\Users\\73911\\.openclaw\\workspace\\agents\\web-developer\\BOOTSTRAP.md",
+          "missing": true,
+          "rawChars": 0,
+          "injectedChars": 91,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 6023,
+        "entries": [
+          {
+            "name": "feishu-doc",
+            "blockChars": 267
+          },
+          {
+            "name": "feishu-drive",
+            "blockChars": 259
+          },
+          {
+            "name": "feishu-perm",
+            "blockChars": 281
+          },
+          {
+            "name": "feishu-wiki",
+            "blockChars": 261
+          },
+          {
+            "name": "coding-agent",
+            "blockChars": 836
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 495
+          },
+          {
+            "name": "nano-pdf",
+            "blockChars": 238
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 763
+          },
+          {
+            "name": "agent-browser",
+            "blockChars": 215
+          },
+          {
+            "name": "feishu-bitable",
+            "blockChars": 201
+          },
+          {
+            "name": "feishu-calendar-operations",
+            "blockChars": 252
+          },
+          {
+            "name": "github-push-backup",
+            "blockChars": 204
+          },
+          {
+            "name": "image-generate",
+            "blockChars": 198
+          },
+          {
+            "name": "multi-agent-feishu-deployment",
+            "blockChars": 242
+          },
+          {
+            "name": "multi-agent-feishu-multi-llm-deployment",
+            "blockChars": 281
+          },
+          {
+            "name": "VeADK-Go 技能集合",
+            "blockChars": 227
+          },
+          {
+            "name": "VeADK 技能集合",
+            "blockChars": 170
+          },
+          {
+            "name": "video-generate",
+            "blockChars": 213
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 3342,
+        "schemaChars": 24043,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 392,
+            "propertiesCount": 4
+          },
+          {
+            "name": "edit",
+            "summaryChars": 129,
+            "schemaChars": 591,
+            "propertiesCount": 6
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 313,
+            "propertiesCount": 3
+          },
+          {
+            "name": "exec",
+            "summaryChars": 181,
+            "schemaChars": 1086,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 85,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1251,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 4860,
+            "propertiesCount": 91
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 54,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 36,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 84,
+            "schemaChars": 273,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 198,
+            "schemaChars": 1179,
+            "propertiesCount": 17
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 207,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 175,
+            "schemaChars": 1084,
+            "propertiesCount": 9
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "feishu_doc",
+            "summaryChars": 321,
+            "schemaChars": 2898,
+            "propertiesCount": 27
+          },
+          {
+            "name": "feishu_app_scopes",
+            "summaryChars": 102,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "feishu_chat",
+            "summaryChars": 46,
+            "schemaChars": 508,
+            "propertiesCount": 5
+          },
+          {
+            "name": "feishu_wiki",
+            "summaryChars": 83,
+            "schemaChars": 971,
+            "propertiesCount": 10
+          },
+          {
+            "name": "feishu_drive",
+            "summaryChars": 81,
+            "schemaChars": 486,
+            "propertiesCount": 5
+          },
+          {
+            "name": "feishu_bitable_get_meta",
+            "summaryChars": 114,
+            "schemaChars": 170,
+            "propertiesCount": 1
+          },
+          {
+            "name": "feishu_bitable_list_fields",
+            "summaryChars": 76,
+            "schemaChars": 255,
+            "propertiesCount": 2
+          },
+          {
+            "name": "feishu_bitable_list_records",
+            "summaryChars": 64,
+            "schemaChars": 462,
+            "propertiesCount": 4
+          },
+          {
+            "name": "feishu_bitable_get_record",
+            "summaryChars": 46,
+            "schemaChars": 335,
+            "propertiesCount": 3
+          },
+          {
+            "name": "feishu_bitable_create_record",
+            "summaryChars": 44,
+            "schemaChars": 549,
+            "propertiesCount": 3
+          },
+          {
+            "name": "feishu_bitable_update_record",
+            "summaryChars": 50,
+            "schemaChars": 473,
+            "propertiesCount": 4
+          },
+          {
+            "name": "feishu_bitable_create_app",
+            "summaryChars": 57,
+            "schemaChars": 243,
+            "propertiesCount": 2
+          },
+          {
+            "name": "feishu_bitable_create_field",
+            "summaryChars": 46,
+            "schemaChars": 911,
+            "propertiesCount": 5
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 334,
+            "schemaChars": 139,
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 151,
+            "schemaChars": 128,
+            "propertiesCount": 3
+          }
+        ]
+      }
+    },
+    "inputTokens": 36,
+    "outputTokens": 365,
+    "cacheRead": 9177,
+    "cacheWrite": 11597,
+    "totalTokens": 20810,
+    "totalTokensFresh": true
+  }
+}

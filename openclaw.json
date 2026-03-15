@@ -146,19 +146,22 @@
     {
       "agentId": "pv-engineer",
       "match": {
-        "channel": "feishu"
+        "channel": "feishu",
+        "accountId": "pv-engineer"
       }
     },
     {
       "agentId": "web-developer",
       "match": {
-        "channel": "feishu"
+        "channel": "feishu",
+        "accountId": "web-developer"
       }
     },
     {
       "agentId": "it-engineer",
       "match": {
-        "channel": "feishu"
+        "channel": "feishu",
+        "accountId": "it-engineer"
       }
     }
   ],
@@ -204,7 +207,7 @@
           "botName": "IT工程师"
         },
         "default": {
-          "dmPolicy": "open",
+          "dmPolicy": "pairing",
           "allowFrom": [
             "*"
           ]
@@ -227,13 +230,13 @@
     },
     "nodes": {
       "denyCommands": [
-        "camera.snap",
-        "camera.clip",
-        "screen.record",
-        "contacts.add",
-        "calendar.add",
-        "reminders.add",
-        "sms.send"
+        "canvas.present",
+        "canvas.hide",
+        "canvas.navigate",
+        "canvas.eval",
+        "canvas.snapshot",
+        "canvas.a2ui.push",
+        "canvas.a2ui.reset"
       ]
     }
   },
@@ -256,7 +259,7 @@
     "installs": {
       "feishu": {
         "source": "npm",
-        "spec": "@openclaw/feishu",
+        "spec": "@openclaw/feishu@2026.3.7",
         "installPath": "C:\\Users\\73911\\.openclaw\\extensions\\feishu",
         "version": "2026.3.7",
         "resolvedName": "@openclaw/feishu",
